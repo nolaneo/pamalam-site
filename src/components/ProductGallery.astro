@@ -1,9 +1,10 @@
 ---
 interface Product {
   id: string;
-  image: string;
   title: string;
   price: string;
+  image: string;
+  link: string;
 }
 
 interface Props {
@@ -14,23 +15,26 @@ let { products } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"
 >
   {
     products.map((product) => (
-      <div class="flex flex-col items-center bg-white rounded-sm shadow-lg overflow-hidden">
+      <a
+        class="flex flex-col items-center bg-white shadow-sm overflow-hidden rounded hover:shadow-xl transition-all duration-300 border border-transparent hover:border-yellow-500 cursor-pointer"
+        href={product.link}
+      >
         <img
-          src={`/images/place.jpg`}
+          src={product.image}
           alt={product.title}
           class="w-full object-cover bg-gray-200"
         />
-        <div class="p-4 text-center">
-          <h3 class="text-lg font-medium text-gray-900 mb-2">
+        <div class="p-4 flex flex-row items-center justify-between w-full">
+          <h3 class="text-lg font-black  uppercase text-gray-900">
             {product.title}
           </h3>
-          <p class="text-gray-600">{product.price}</p>
+          <p class="text-gray-700 text-lg ml-auto">{product.price}</p>
         </div>
-      </div>
+      </a>
     ))
   }
 </div>

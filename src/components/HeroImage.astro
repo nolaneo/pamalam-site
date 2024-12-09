@@ -2,9 +2,10 @@
 interface Props {
   src: string;
   alt?: string;
+  text?: string;
 }
 
-let { src, alt = "Hero image" } = Astro.props;
+let { src, alt = "Hero image", text } = Astro.props;
 ---
 
 <div class="relative w-full">
@@ -13,4 +14,12 @@ let { src, alt = "Hero image" } = Astro.props;
     alt={alt}
     class="w-full h-[70vh] min-h-[500px] sm:h-[50vh] max-h-[50vh] object-cover"
   />
+
+  {
+    text && (
+      <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl font-black uppercase text-yellow-500">
+        {text}
+      </h1>
+    )
+  }
 </div>

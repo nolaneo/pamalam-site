@@ -1,4 +1,5 @@
 ---
+import TopNav from "../../../components/TopNav.astro";
 import products from "../../../data/products.json";
 import Layout from "../../../layouts/Layout.astro";
 
@@ -14,11 +15,87 @@ const productData = products.candles.find((p) => p.id === product);
 if (!productData) {
   throw new Error(`Product not found: ${product}`);
 }
+
+const images = [1, 2, 3].map((i) => `/images/candles-180/${product}/${i}.jpg`);
 ---
 
 <Layout title={productData.title}>
-  <main>
-    <h1>{productData.title}</h1>
-    <p>Price: ${productData.price}</p>
+  <TopNav />
+
+  <main class="p-8 pt-24 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="flex flex-col gap-4">
+      <img
+        src={images[1]}
+        alt={productData.title}
+        class="w-full h-full object-cover rounded-xl"
+      />
+    </div>
+    <div
+      class="flex flex-col gap-4 items-center md:items-start lg:items-start text-center md:text-left lg:text-left px-12"
+    >
+      <h1 class="text-4xl font-bold mb-4 uppercase">
+        {productData.title}
+      </h1>
+
+      <p class="text-gray-900">{productData.description}</p>
+
+      <div class="flex flex-col gap-2">
+        <p class="text-gray-900">
+          <b class="font-bold">Top Notes:</b>{" "}
+          {productData.top_notes.join(", ")}
+        </p>
+        <p class="text-gray-900">
+          <b class="font-bold">Middle Notes:</b>{" "}
+          {productData.middle_notes.join(", ")}
+        </p>
+        <p class="text-gray-900">
+          <b class="font-bold">Base Notes:</b>{" "}
+          {productData.base_notes.join(", ")}
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-12 mt-4 text-sm">
+        <div class="flex flex-col gap-2">
+          <p class="text-gray-900">180g Coconut & Rapeseed Wax Candle</p>
+          <p class="text-gray-900">
+            Amber glass jar with black lid and cotton wick.
+          </p>
+          <p class="text-gray-900">Burn time: 35-40 hours approx.</p>
+          <p class="text-gray-900">Handmade in Ireland</p>
+        </div>
+
+        <p class="text-gray-900 text-xl font-bold">
+          FREE SHIPPING in Ireland for orders over €60.
+        </p>
+
+        <div class="flex flex-col gap-2">
+          <h2 class="text-lg font-semibold">
+            Why we only use coconut and rapeseed wax:
+          </h2>
+          <ul class="list-none space-y-2 text-gray-900">
+            <li>
+              <span class="font-bold">Environmental sustainability:</span> Both coconut
+              and rapeseed wax are more sustainable and eco-friendly than paraffin
+              or soy wax. Coconut wax is made from the meat of coconuts, which are
+              a renewable resource, while rapeseed wax is made from the oil of the
+              rapeseed plant, which is a non-toxic and biodegradable crop.
+            </li>
+            <li>
+              <span class="font-bold">Better scent throw:</span> Coconut and rapeseed
+              wax candles have a stronger scent throw than soy wax candles.
+            </li>
+            <li>
+              <span class="font-bold">Longer burn time:</span> Both coconut and rapeseed
+              wax have a higher melting point than soy wax, they burn more slowly
+              and last longer.
+            </li>
+            <li>
+              <span class="font-bold">Cleaner burning:</span> Coconut and rapeseed
+              wax produce less soot than soy wax.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>

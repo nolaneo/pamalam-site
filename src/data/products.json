@@ -6,7 +6,11 @@
       "id": "bergamot-and-patchouli",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 6863752593486
+      "shopify_id": 6863752593486,
+      "description": "Decadent & multi layered scent that invigorates & soothes. Bergamot's fresh, bright, and uplifting aroma combined with the deep musk of patchouli makes this candle a firm favourite.",
+      "top_notes": ["Bergamot", "Orange"],
+      "middle_notes": ["Jasmine"],
+      "base_notes": ["Patchouli"]
     },
     {
       "title": "Coconut & Lime",
@@ -14,7 +18,11 @@
       "id": "coconut-and-lime",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 6855630749774
+      "shopify_id": 6855630749774,
+      "description": "Tropical and fruity, this scent is a rich blend of coconut, limes, orange, lemon and a hint of strawberry onto a heart of coconut, peach and floral nuances all resting on a sweet base of vanilla, sugar and musk.",
+      "top_notes": ["Coconut", "Lime", "Orange", "Lemon", "Strawberry"],
+      "middle_notes": ["Coconut", "Peach", "Floral Notes"],
+      "base_notes": ["Vanilla", "Sugar", "Musk"]
     },
     {
       "title": "Tobacco & Oak",
@@ -22,7 +30,11 @@
       "id": "tobacco-and-oak",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 6863377694798
+      "shopify_id": 6863377694798,
+      "description": "A woody aroma of dry dusty tobacco, soft bergamot and sun sweetened mandarin. Hints of rock rose, black pepper and roasted nutmeg are accompanied by a heart of patchouli and gentle tobacco flower, leading to a rich base of sandalwood, sensual amber, leather and musk.",
+      "top_notes": ["Bergamot", "Mandarin"],
+      "middle_notes": ["Black Pepper", "Nutmeg", "Tobacco Flower", "Patchouli"],
+      "base_notes": ["Sandalwood", "Leather", "Musk"]
     },
     {
       "title": "Clove & Orange",
@@ -30,7 +42,11 @@
       "id": "clove-and-orange",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 6863378350158
+      "shopify_id": 6863378350158,
+      "description": "An herbal eruption, this crowd pleaser has top notes of pine, eucalyptus, orange, pear, cassis, green leaf, galbanum and strawberry, a heart of rose, hyacinth, gardenia, orange blossom, cinnamon, clove and peach on a base of cedar, sandalwood, amber, patchouli, sugar, musk and vanilla.",
+      "top_notes": ["Pine", "Eucalyptus", "Orange", "Pear", "Cassis", "Green Leaf", "Galbanum", "Strawberry"],
+      "middle_notes": ["Rose", "Hyacinth", "Gardenia", "Orange Blossom", "Cinnamon", "Clove", "Peach"],
+      "base_notes": ["Cedar", "Sandalwood", "Amber", "Patchouli", "Sugar", "Musk", "Vanilla"]
     },
     {
       "title": "Amber & Citrus",
@@ -38,7 +54,11 @@
       "id": "amber-and-citrus",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 6863378022478
+      "shopify_id": 6863378022478,
+      "description": "Fresh and complicated, prepare for juicy oranges, mandarins, tangerines and bergamot combined with a base of rich dry woods including patchouli and sandalwood nestled on a base of dark amber and musk.",
+      "top_notes": ["Orange", "Tangerine", "Mandarin", "Bergamot"],
+      "middle_notes": ["Patchouli", "Sandalwood", "Vetivert"],
+      "base_notes": ["Amber", "Musk"]
     },
     {
       "title": "Cinnamon & Saffron",
@@ -46,7 +66,11 @@
       "id": "cinnamon-and-saffron",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 9744257089879
+      "shopify_id": 9744257089879,
+      "description": "A little spicy, a little sweet, this blend of saffron, cinnamon and mixed spice creates a rich and warming scent that works for winter or summer.",
+      "top_notes": ["Cinnamon", "Coriander", "Ginger"],
+      "middle_notes": ["Saffron", "Honey"],
+      "base_notes": ["Vanilla", "Tonka bean"]
     },
     {
       "title": "Black Lavender",
@@ -54,7 +78,11 @@
       "id": "black-lavender",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 9745557258583
+      "shopify_id": 9745557258583,
+      "description": "Fresh and familiar. A dash of citrus compliments soothing notes of lavender, grounded by a deep base of black amber and oak.",
+      "top_notes": ["Grapefruit", "Lemon"],
+      "middle_notes": ["Lavender"],
+      "base_notes": ["Amber", "Oak", "Tonka Bean"]
     },
     {
       "title": "Oudh & Bergamot",
@@ -62,7 +90,11 @@
       "id": "oudh-and-bergamot",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 9745552146775
+      "shopify_id": 9745552146775,
+      "description": "Hypnotic and smoky, the luxurious notes of citrus and bergamot, underpinned with the intensity of Oud creates a serene richness that evokes a favourite Spa.",
+      "top_notes": ["Citrus", "Bergamot"],
+      "middle_notes": ["Cedarwood"],
+      "base_notes": ["Oud"]
     },
     {
       "title": "Neroli & Jasmine",
@@ -70,7 +102,11 @@
       "id": "neroli-and-jasmine",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 9745544216919
+      "shopify_id": 9745544216919,
+      "description": "A refreshing harmony of citrus and floral, derived from orange blossom with heart notes of eucalyptus and jasmine on a base of musk.",
+      "top_notes": ["Neroli", "Lime", "Juniper"],
+      "middle_notes": ["Jasmine", "Eucalyptus", "Lily"],
+      "base_notes": ["Musk"]
     },
     {
       "title": "Spiced Maple",
@@ -78,7 +114,11 @@
       "id": "spiced-maple",
       "details": [],
       "number_of_images": 4,
-      "shopify_id": 9745555980631
+      "shopify_id": 9745555980631,
+      "description": "A sweet and spicy festive treat, embrace the winter season with top notes of orange and cinnamon and a warm sweet base of vanilla and maple.",
+      "top_notes": ["Orange", "Cinnamon", "Ginger"],
+      "middle_notes": ["Tonka bean"],
+      "base_notes": ["Maple"]
     }
   ] 
 }

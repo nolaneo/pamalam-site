@@ -1,11 +1,20 @@
+---
+interface Props {
+  shouldFade?: boolean;
+}
+
+let { shouldFade = false } = Astro.props;
+---
+
 <nav
-  class="fixed z-10 top-0 transition-colors duration-500 w-full bg-opacity-50 backdrop-blur-0"
+  class="fixed z-10 top-0 transition-colors duration-500 w-full bg-opacity-80 backdrop-blur-0"
   id="topNav"
+  data-should-fade={shouldFade}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="h-16 flex items-center">
       <a
-        class="font-light text-xl text-dark-brown text-center sm:text-left w-full sm:w-auto transition-colors duration-500"
+        class="font-medium text-xl text-yellow-500 text-center sm:text-left w-full sm:w-auto hover:underline"
         id="navTitle"
         href="/"
       >
@@ -18,20 +27,19 @@
 <script>
   let nav = document.getElementById("topNav")!;
   let title = document.getElementById("navTitle")!;
+  let shouldFade = nav.hasAttribute("data-should-fade");
 
   function updateNav() {
     let scrollPosition = window.scrollY;
 
-    if (scrollPosition > 0) {
+    if (scrollPosition > 0 || shouldFade == false) {
       nav.classList.add("bg-white");
       nav.classList.remove("backdrop-blur-0");
       nav.classList.add("backdrop-blur-md");
-      title.classList.add("text-gray-700");
     } else {
       nav.classList.remove("bg-white");
       nav.classList.remove("backdrop-blur-md");
       nav.classList.add("backdrop-blur-0");
-      title.classList.remove("text-gray-700");
     }
   }
 
