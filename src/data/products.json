@@ -1,0 +1,84 @@
+{
+  "candles": [
+    {
+      "title": "Bergamot & Patchouli",
+      "price": "€20",
+      "id": "bergamot-and-patchouli",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 6863752593486
+    },
+    {
+      "title": "Coconut & Lime",
+      "price": "€20",
+      "id": "coconut-and-lime",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 6855630749774
+    },
+    {
+      "title": "Tobacco & Oak",
+      "price": "€20",
+      "id": "tobacco-and-oak",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 6863377694798
+    },
+    {
+      "title": "Clove & Orange",
+      "price": "€20",
+      "id": "clove-and-orange",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 6863378350158
+    },
+    {
+      "title": "Amber & Citrus",
+      "price": "€20",
+      "id": "amber-and-citrus",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 6863378022478
+    },
+    {
+      "title": "Cinnamon & Saffron",
+      "price": "€20",
+      "id": "cinnamon-and-saffron",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 9744257089879
+    },
+    {
+      "title": "Black Lavender",
+      "price": "€20",
+      "id": "black-lavender",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 9745557258583
+    },
+    {
+      "title": "Oudh & Bergamot",
+      "price": "€20",
+      "id": "oudh-and-bergamot",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 9745552146775
+    },
+    {
+      "title": "Neroli & Jasmine",
+      "price": "€20",
+      "id": "neroli-and-jasmine",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 9745544216919
+    },
+    {
+      "title": "Spiced Maple",
+      "price": "€20",
+      "id": "spiced-maple",
+      "details": [],
+      "number_of_images": 4,
+      "shopify_id": 9745555980631
+    }
+  ] 
+}

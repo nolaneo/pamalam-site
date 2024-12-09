@@ -1,0 +1,24 @@
+---
+import products from "../../../data/products.json";
+import Layout from "../../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return products.candles.map((product) => ({
+    params: { product: product.id },
+  }));
+}
+
+const { product } = Astro.params;
+const productData = products.candles.find((p) => p.id === product);
+
+if (!productData) {
+  throw new Error(`Product not found: ${product}`);
+}
+---
+
+<Layout title={productData.title}>
+  <main>
+    <h1>{productData.title}</h1>
+    <p>Price: ${productData.price}</p>
+  </main>
+</Layout>

@@ -1,0 +1,40 @@
+<nav
+  class="fixed z-10 top-0 transition-colors duration-500 w-full bg-opacity-50 backdrop-blur-0"
+  id="topNav"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="h-16 flex items-center">
+      <a
+        class="font-light text-xl text-dark-brown text-center sm:text-left w-full sm:w-auto transition-colors duration-500"
+        id="navTitle"
+        href="/"
+      >
+        PAMALAM
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  let nav = document.getElementById("topNav")!;
+  let title = document.getElementById("navTitle")!;
+
+  function updateNav() {
+    let scrollPosition = window.scrollY;
+
+    if (scrollPosition > 0) {
+      nav.classList.add("bg-white");
+      nav.classList.remove("backdrop-blur-0");
+      nav.classList.add("backdrop-blur-md");
+      title.classList.add("text-gray-700");
+    } else {
+      nav.classList.remove("bg-white");
+      nav.classList.remove("backdrop-blur-md");
+      nav.classList.add("backdrop-blur-0");
+      title.classList.remove("text-gray-700");
+    }
+  }
+
+  window.addEventListener("scroll", updateNav);
+  updateNav(); // Run once on load
+</script>

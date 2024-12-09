@@ -1,0 +1,16 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+}
+
+let { src, alt = "Hero image" } = Astro.props;
+---
+
+<div class="relative w-full">
+  <img
+    src={src}
+    alt={alt}
+    class="w-full h-[70vh] min-h-[500px] sm:h-[50vh] max-h-[50vh] object-cover"
+  />
+</div>
