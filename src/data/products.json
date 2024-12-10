@@ -220,5 +220,40 @@
       "base_notes": ["Maple"],
       "size": "500"
     }
-  ] 
+  ],
+  "diffusers": [
+    {
+      "title": "Jasmine & Musk",
+      "price": "€28",
+      "id": "jasmine-and-musk-100",
+      "shopify_id": 9746474434903,
+      "description": "Woody and floral, this aromatic fusion of bergamot, citrus and juniper, with heart notes of jasmine grounded on an earthy base of amber, musk, and patchouli.",
+      "top_notes": ["Bergamot", "Citrus", "Pepper", "Juniper"],
+      "middle_notes": ["Jasmine", "Rock Rose"],
+      "base_notes": ["Amber", "Musk", "Patchouli"],
+      "size": "100"
+    },
+    {
+      "title": "Coconut & Lime",
+      "price": "€28",
+      "id": "coconut-and-lime-100",
+      "shopify_id": 9746473845079,
+      "description": "Tropical and fruity, this scent is a rich blend of coconut, limes, orange, lemon and a hint of strawberry onto a heart of coconut, peach and floral nuances all resting on a sweet base of vanilla, sugar and musk.",
+      "top_notes": ["Coconut", "Lime", "Orange", "Lemon", "Strawberry"],
+      "middle_notes": ["Coconut", "Peach", "Floral Notes"],
+      "base_notes": ["Vanilla", "Sugar", "Musk"],
+      "size": "100"
+    },
+    {
+      "title": "Tobacco & Oak",
+      "price": "€28",
+      "id": "tobacco-and-oak-100",
+      "shopify_id": 9746470469975,
+      "description": "A woody aroma of dry dusty tobacco, soft bergamot and sun sweetened mandarin. Hints of rock rose, black pepper and roasted nutmeg are accompanied by a heart of patchouli and gentle tobacco flower, leading to a rich base of sandalwood, sensual amber, leather and musk.",
+      "top_notes": ["Bergamot", "Mandarin"],
+      "middle_notes": ["Black Pepper", "Nutmeg", "Tobacco Flower", "Patchouli"],
+      "base_notes": ["Sandalwood", "Leather", "Musk"],
+      "size": "100"
+    }
+  ]
 }

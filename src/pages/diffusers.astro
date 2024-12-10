@@ -3,13 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import ProductGallery from "../components/ProductGallery.astro";
 import products from "../data/products.json";
 import TopNav from "../components/TopNav.astro";
-import HeroImage from "../components/HeroImage.astro";
 
-let candles = products.candles.map((product, index) => ({
+let diffusers = products.diffusers.map((product, index) => ({
   id: product.id,
   title: product.title,
-  image: `/images/candles-180/${product.id}/${(index % 3) + 1}.jpg`,
-  link: `/candles/${product.id}`,
+  size: `${product.size}ml`,
+  image: `/images/diffusers-${product.size}/${product.id}/${(index % 2) + 1}.jpg`,
+  link: `/diffusers/${product.id}`,
   price: product.price,
 }));
 ---
@@ -19,17 +19,17 @@ let candles = products.candles.map((product, index) => ({
   <main class="relative pt-16">
     <div class="relative w-full">
       <img
-        src={"/images/sections/candle-section.jpg"}
-        class="w-full h-[40vh] min-h-[300px] sm:h-[50vh] max-h-[50vh] object-cover"
+        src={"/images/sections/diffuser-section.jpg"}
+        class="w-full h-[30vh] object-cover"
       />
 
       <h1
         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl font-black uppercase text-yellow-500"
       >
-        Candles
+        Diffusers
       </h1>
     </div>
 
-    <ProductGallery products={candles} />
+    <ProductGallery products={diffusers} />
   </main>
 </Layout>

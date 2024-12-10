@@ -4,19 +4,21 @@ import products from "../../../data/products.json";
 import Layout from "../../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  return products.candles.map((product) => ({
+  return products.diffusers.map((product) => ({
     params: { product: product.id },
   }));
 }
 
 const { product } = Astro.params;
-const productData = products.candles.find((p) => p.id === product);
+const productData = products.diffusers.find((p) => p.id === product);
 
 if (!productData) {
   throw new Error(`Product not found: ${product}`);
 }
 
-const images = [1, 2, 3].map((i) => `/images/candles-180/${product}/${i}.jpg`);
+const images = [1, 2, 3].map(
+  (i) => `/images/diffusers-100/${product}/${i}.jpg`
+);
 ---
 
 <Layout title={productData.title}>
@@ -58,11 +60,9 @@ const images = [1, 2, 3].map((i) => `/images/candles-180/${product}/${i}.jpg`);
 
       <div class="flex flex-col gap-12 mt-4 text-sm">
         <div class="flex flex-col gap-2">
-          <p class="text-gray-900">180g Coconut & Rapeseed Wax Candle</p>
-          <p class="text-gray-900">
-            Amber glass jar with black lid and cotton wick.
-          </p>
-          <p class="text-gray-900">Burn time: 35-40 hours approx.</p>
+          <p class="text-gray-900">100ml Diffuser</p>
+          <p class="text-gray-900">Amber glass bottle with black lid.</p>
+          <p class="text-gray-900">Lasts approximately 3 months.</p>
           <p class="text-gray-900">Handmade in Ireland</p>
         </div>
 
@@ -75,34 +75,6 @@ const images = [1, 2, 3].map((i) => `/images/candles-180/${product}/${i}.jpg`);
           data-shopify-id={productData.shopify_id}
         >
         </a>
-
-        <div class="flex flex-col gap-2">
-          <h2 class="text-lg font-semibold">
-            Why we only use coconut and rapeseed wax:
-          </h2>
-          <ul class="list-none space-y-2 text-gray-900">
-            <li>
-              <span class="font-bold">Environmental sustainability:</span> Both coconut
-              and rapeseed wax are more sustainable and eco-friendly than paraffin
-              or soy wax. Coconut wax is made from the meat of coconuts, which are
-              a renewable resource, while rapeseed wax is made from the oil of the
-              rapeseed plant, which is a non-toxic and biodegradable crop.
-            </li>
-            <li>
-              <span class="font-bold">Better scent throw:</span> Coconut and rapeseed
-              wax candles have a stronger scent throw than soy wax candles.
-            </li>
-            <li>
-              <span class="font-bold">Longer burn time:</span> Both coconut and rapeseed
-              wax have a higher melting point than soy wax, they burn more slowly
-              and last longer.
-            </li>
-            <li>
-              <span class="font-bold">Cleaner burning:</span> Coconut and rapeseed
-              wax produce less soot than soy wax.
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </main>
