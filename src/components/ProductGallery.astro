@@ -5,6 +5,7 @@ interface Product {
   price: string;
   image: string;
   link: string;
+  size: string;
 }
 
 interface Props {
@@ -29,9 +30,14 @@ let { products } = Astro.props;
           class="w-full object-cover bg-gray-200"
         />
         <div class="p-4 flex flex-row items-center justify-between w-full">
-          <h3 class="text-lg font-black  uppercase text-gray-900">
-            {product.title}
-          </h3>
+          <div class="flex flex-row items-center gap-2">
+            <h3 class="text-lg font-medium  uppercase text-gray-900">
+              {product.title}
+            </h3>
+            <span>&bull;</span>
+            <p class="text-gray-500 text-lg ml-auto">{product.size}</p>
+          </div>
+
           <p class="text-gray-700 text-lg ml-auto">{product.price}</p>
         </div>
       </a>

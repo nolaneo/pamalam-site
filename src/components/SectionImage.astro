@@ -13,12 +13,12 @@ let { src, title, alt = "Section image", target } = Astro.props;
   <img
     src={src}
     alt={alt}
-    class="w-full h-[50vh] lg:h-[70vh] min-h-[500px] max-h-[50vh] object-cover"
+    class="w-full h-[50vh] min-h-[500px] max-h-[50vh] object-cover"
   />
 
   <a
     href={target}
-    class="absolute font-black whitespace-nowrap uppercase font-white bottom-10 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-lg font-sans bg-opacity-80 backdrop-blur-sm hover:backdrop-blur-lg text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 z-20"
+    class="absolute font-medium whitespace-nowrap uppercase font-white bottom-10 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-lg font-sans bg-opacity-80 backdrop-blur-sm hover:backdrop-blur-lg text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 z-20"
   >
     Shop {title}
   </a>

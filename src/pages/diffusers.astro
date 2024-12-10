@@ -3,12 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import ProductGallery from "../components/ProductGallery.astro";
 import products from "../data/products.json";
 import TopNav from "../components/TopNav.astro";
+import HeroImage from "../components/HeroImage.astro";
 
 let candles = products.candles.map((product, index) => ({
   id: product.id,
   title: product.title,
-  size: `${product.size}g`,
-  image: `/images/candles-${product.size}/${product.id}/${(index % 3) + 1}.jpg`,
+  image: `/images/candles-180/${product.id}/${(index % 3) + 1}.jpg`,
   link: `/candles/${product.id}`,
   price: product.price,
 }));
@@ -20,7 +20,7 @@ let candles = products.candles.map((product, index) => ({
     <div class="relative w-full">
       <img
         src={"/images/sections/candle-section.jpg"}
-        class="w-full h-[30vh] object-cover"
+        class="w-full h-[40vh] min-h-[300px] sm:h-[50vh] max-h-[50vh] object-cover"
       />
 
       <h1

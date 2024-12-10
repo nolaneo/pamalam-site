@@ -16,9 +16,7 @@ if (!productData) {
   throw new Error(`Product not found: ${product}`);
 }
 
-const images = [1, 2, 3].map(
-  (i) => `/images/candles-${productData.size}/${product}/${i}.jpg`
-);
+const images = [1, 2, 3].map((i) => `/images/candles-180/${product}/${i}.jpg`);
 ---
 
 <Layout title={productData.title}>
@@ -60,30 +58,12 @@ const images = [1, 2, 3].map(
 
       <div class="flex flex-col gap-12 mt-4 text-sm">
         <div class="flex flex-col gap-2">
-          {
-            productData.size === "180" && (
-              <>
-                <p class="text-gray-900">180g Coconut & Rapeseed Wax Candle</p>
-                <p class="text-gray-900">
-                  Amber glass jar with black lid and cotton wick.
-                </p>
-                <p class="text-gray-900">Burn time: 35-40 hours approx.</p>
-                <p class="text-gray-900">Handmade in Ireland</p>
-              </>
-            )
-          }
-          {
-            productData.size === "500" && (
-              <>
-                <p class="text-gray-900">500g Coconut & Rapeseed Wax Candle</p>
-                <p class="text-gray-900">
-                  Amber glass jar with black lid and cotton wick.
-                </p>
-                <p class="text-gray-900">Burn time: 50 hours approx.</p>
-                <p class="text-gray-900">Handmade in Ireland</p>
-              </>
-            )
-          }
+          <p class="text-gray-900">180g Coconut & Rapeseed Wax Candle</p>
+          <p class="text-gray-900">
+            Amber glass jar with black lid and cotton wick.
+          </p>
+          <p class="text-gray-900">Burn time: 35-40 hours approx.</p>
+          <p class="text-gray-900">Handmade in Ireland</p>
         </div>
 
         <p class="text-gray-900 text-xl font-bold">
