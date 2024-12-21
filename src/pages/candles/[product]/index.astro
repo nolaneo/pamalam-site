@@ -37,8 +37,12 @@ const images = [1, 2, 3].map(
     <div
       class="flex flex-col gap-4 items-center md:items-start lg:items-start text-center md:text-left lg:text-left px-12"
     >
-      <h1 class="text-4xl font-bold mb-4 uppercase">
+      <h1 class="text-4xl font-bold uppercase">
         {productData.title}
+      </h1>
+
+      <h1 class="text-2xl font-light mb-4 uppercase">
+        {productData.price}
       </h1>
 
       <p class="text-gray-900">{productData.description}</p>
@@ -86,7 +90,7 @@ const images = [1, 2, 3].map(
           }
         </div>
 
-        <p class="text-gray-900 text-xl font-bold">
+        <p class="text-gray-900 text-lg font-semibold">
           FREE SHIPPING in Ireland for orders over €60.
         </p>
 
