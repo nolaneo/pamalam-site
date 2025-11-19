@@ -43,6 +43,21 @@ const { title } = Astro.props;
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-141344238-1"></script>
 
+    <!-- Zoho SalesIQ Widget -->
+    <script is:inline>
+      window.$zoho = window.$zoho || {};
+      $zoho.salesiq = $zoho.salesiq || {
+        ready: function () {
+          // Hide the chat button on initial load
+          $zoho.salesiq.floatbutton.visible("hide");
+        },
+      };
+    </script>
+    <script
+      id="zsiqscript"
+      src="https://salesiq.zohopublic.eu/widget?wc=siq450d81f2418f16f936d79c791ab473f170911abf2e1bcd652588a1fe8036bd56"
+      defer></script>
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -63,16 +78,17 @@ const { title } = Astro.props;
   </body>
 
   <script is:inline>
-    // document.addEventListener("scroll", () => {
-    //   if (!window.showingIntercom) {
-    //     window.showingIntercom = true;
-    //     setTimeout(function () {
-    //       Intercom("update", {
-    //         hide_default_launcher: false,
-    //       });
-    //     }, 500);
-    //   }
-    // });
+    // Show Zoho chat button on scroll
+    document.addEventListener("scroll", () => {
+      if (!window.showingZohoChat) {
+        window.showingZohoChat = true;
+        setTimeout(function () {
+          if (window.$zoho && $zoho.salesiq && $zoho.salesiq.floatbutton) {
+            $zoho.salesiq.floatbutton.visible("show");
+          }
+        }, 500);
+      }
+    });
 
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".details__thumbnail").forEach((thumbnail) => {
@@ -204,42 +220,5 @@ const { title } = Astro.props;
     gtag("js", new Date());
 
     gtag("config", "UA-141344238-1");
-
-    // window.intercomSettings = {
-    //   app_id: "ec3q1hf4",
-    //   hide_default_launcher: true,
-    // };
-
-    // (function () {
-    //   var w = window;
-    //   var ic = w.Intercom;
-    //   if (typeof ic === "function") {
-    //     ic("reattach_activator");
-    //     ic("update", w.intercomSettings);
-    //   } else {
-    //     var d = document;
-    //     var i = function () {
-    //       i.c(arguments);
-    //     };
-    //     i.q = [];
-    //     i.c = function (args) {
-    //       i.q.push(args);
-    //     };
-    //     w.Intercom = i;
-    //     var l = function () {
-    //       var s = d.createElement("script");
-    //       s.type = "text/javascript";
-    //       s.async = true;
-    //       s.src = "https://widget.intercom.io/widget/ec3q1hf4";
-    //       var x = d.getElementsByTagName("script")[0];
-    //       x.parentNode.insertBefore(s, x);
-    //     };
-    //     if (w.attachEvent) {
-    //       w.attachEvent("onload", l);
-    //     } else {
-    //       w.addEventListener("load", l, false);
-    //     }
-    //   }
-    // })();
   </script>
 </html>
